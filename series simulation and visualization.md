@@ -1,9 +1,9 @@
 ## Simulation of a Time Series with Gamma Distribution and Graphical Representation
 
-1) In the series, 500 values were simulated using Gamma Distribution.
+1) In the time series, 500 values were simulated using Gamma Distribution.
 2) As can be seen from the graphical representation the series doesn't have a trend and no seasonalities are observed. By smoothing the time series with method "loess" shows that there is no trend in this case.
 3) White Noises are identifiable.
-4) the time series is stationary.
+4) The time series is stationary.
 
 
 ```R
