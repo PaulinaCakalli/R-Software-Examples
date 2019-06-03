@@ -1,9 +1,7 @@
 ## Simulation of a Time Series with Gamma Distribution and Graphical Representation
 
-1) Në serinë e parë janë simuluar 500 të dhëna nga një shpërndarje gama 
-   In the first series, 500 values were simulated using gamma distribution
-2) Nga paraqitja grafike themi se seria nuk ka trend dhe nuk vihen re sezonalitete të qarta
-   As can be seen from the graphical representation the series doesn't have a trend and no seasonalities are observed
+1) In the series, 500 values were simulated using Gamma Distribution
+2) As can be seen from the graphical representation the series doesn't have a trend and no seasonalities are observed
    
 3) Vihet re zhurma
 4) Seria është stacionare
