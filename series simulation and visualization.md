@@ -24,3 +24,8 @@ p=ggplot(data = df, aes(x =Year, y = Value))
 
 p + stat_smooth(color = "#FC4E07", fill = "#FC4E07",method = "loess")
 ```
+
+Graphic results
+
+
+![](gamma-series-graphic.png)
