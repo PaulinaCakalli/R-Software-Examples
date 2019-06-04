@@ -50,7 +50,7 @@ for (i in 1:12)
   cex.main = 1,   font.main= 3, col.main= "blue",
   cex.sub = 0.55, font.sub = 2, col.sub = "blue")
   
-  leg=c(as.expression(substitute(atop(r == cor), list(cor=round(r[i],3)))))
+  legc <- (as.expression(substitute(atop(r == cor), list(cor=round(r[i],3)))))
   leg1 <- sapply(leg, as.expression)
   legend("bottomright", legend=leg1, text.col ="blue", bg="white", x.intersp=0)
   abline(a=0, b=1, col="orange",lwd=2)    
@@ -58,4 +58,6 @@ for (i in 1:12)
 ```
 
 Graphic results
+
+
 ![](scatter-plot-gamma.png)
