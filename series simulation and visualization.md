@@ -35,5 +35,27 @@ Graphic results
 2)  Reja e pikave është e rrumbullakosur afër zeros dhe koeficientët e autokorrelacionit janë më afër zeros sesa 1
 3)	Duke qenë se seria është stacionare vihet re që nuk kemi trend stokatik
 
+```R
+l <- length(ts_data)
+r <-c()
+par(mfrow=c(4,3))
+for (i in 1:12)
+{
+  lagged<- ts_data[(1+i): l]
+  laggedToo = ts_data[1:(l-i)]
+  r[i] <- round(cor(lagged, laggedToo),3)
+  
+  plot(lagged, laggedToo,col="black", xlab ="", ylab=paste("Daily Time Series Lag",i))
+  title(main = paste("Lag ",i), sub = paste("", r[i]),
+  cex.main = 1,   font.main= 3, col.main= "blue",
+  cex.sub = 0.55, font.sub = 2, col.sub = "blue")
+  
+  leg=c(as.expression(substitute(atop(r == cor), list(cor=round(r[i],3)))))
+  leg1 <- sapply(leg, as.expression)
+  legend("bottomright", legend=leg1, text.col ="blue", bg="white", x.intersp=0)
+  abline(a=0, b=1, col="orange",lwd=2)    
+}
+```
+
 Graphic results
 ![](scatter-plot-gamma.png)
