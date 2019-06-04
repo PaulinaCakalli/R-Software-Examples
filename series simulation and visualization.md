@@ -28,4 +28,5 @@ p + stat_smooth(color = "#FC4E07", fill = "#FC4E07",method = "loess")
 Graphic results
 
 
-![](gamma-series-graphic.png)
+
+#Retë për N[1], N[2], N[3], ..., N[12] për serinë e parë 
