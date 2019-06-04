@@ -27,6 +27,9 @@ p + stat_smooth(color = "#FC4E07", fill = "#FC4E07",method = "loess")
 
 Graphic results
 
+![](gamma-series-graphic.png)
 
-
-#Retë për N[1], N[2], N[3], ..., N[12] për serinë e parë 
+## Retë për N[1], N[2], N[3], ..., N[12] për serinë e parë 
+1)	Për të kuptuar më mirë retë e pikave ndërtoj një funksion, i cili do të vizatoj për lage të ndryshme edhe një drejtëz lineare. Paraqes edhe koeficientin e autokorrelacionit poshtë boshteve të x-it
+2)  Reja e pikave është e rrumbullakosur afër zeros dhe koeficientët e autokorrelacionit janë më afër zeros sesa 1
+3)	Duke qenë se seria është stacionare vihet re që nuk kemi trend stokatik
