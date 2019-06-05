@@ -30,7 +30,7 @@ Graphic results
 ![](gamma-series-graphic.png)
 
 
-## Scatter plots for N[1], N[2], N[3], ..., N[12]  
+## Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>   
 1)	Scatter plots help us to understand better the nature of time series. The following function draws a straight line for every lag.       Correlation coefficient are shown bottomright on the graph.
 2)  As can be seen from the graphical representation almost all the points are near zero and the correlation coefficient is also near zero.
 
@@ -60,3 +60,19 @@ Graphic results
 
 
 ![](scatter-plot-gamma.png)
+
+3)	Autocorrelation coefficient and correlogram graph
+
+   	
+    Autocorrelation coefficients for lag=1:12         
+    *r*<sub>1</sub> *r*<sub>2</sub> *r*<sub>3</sub> *r*<sub>4</sub> *r*<sub>5</sub> *r*<sub>6</sub> *r*<sub>7</sub> *r*<sub>8       </sub> *r*<sub>9</sub> *r*<sub>10</sub> *r*<sub>11</sub> *r*<sub>12</sub>
+    
+     
+     ```R
+     library(FinTS)
+     Acf(ts_data, lag.max = 20, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
+     ```
+
+  
+
+ :octocat: 
