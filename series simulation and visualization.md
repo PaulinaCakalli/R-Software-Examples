@@ -31,8 +31,8 @@ Graphic results
 
 
 ## Scatter plots for N[1], N[2], N[3], ..., N[12]  
-1)	Scatter plots help us to understand better the nature of time seires. There is build a function wich draw for every lag a straight       line. Correlation coefficient are shown bottomright on the graph.
-2)  As can be seen from the graphical representation almost all the points are near of zero and the correlation coefficient also near of zero.
+1)	Scatter plots help us to understand better the nature of time series. The following function draws a straight line for every lag.       Correlation coefficient are shown bottomright on the graph.
+2)  As can be seen from the graphical representation almost all the points are near zero and the correlation coefficient is also near zero.
 
 ```R
 l <- length(ts_data)
