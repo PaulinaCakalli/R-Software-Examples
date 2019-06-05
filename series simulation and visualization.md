@@ -84,6 +84,6 @@ Graphic results
      [1] -0.08765386
      ```
 
- ![](acf-correlation.png) 
+ ![](acf-correlation-12lags.png)   ![](acf-correlation-all data.png) 
 
  :octocat: 
