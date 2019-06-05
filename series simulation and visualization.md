@@ -74,7 +74,8 @@ Graphic results
      ```R
      library(FinTS)
      
-     Acf(ts_data, lag.max = 20, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
+     Acf(ts_data, lag.max = 12, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
+     Acf(ts_data, lag.max = length(ts_data), type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
      
      L=length(ts_data)
      1.96/sqrt(L) 
