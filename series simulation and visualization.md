@@ -68,6 +68,9 @@ Graphic results
      
     Confidence interval is _]-0.08765386;0.08765386[_
     
+    •	Vihet re se pjesa më e madhe e autokorrelacioneve është brenda intervalit të besimit dhe vetëm një autokorrelacion ndodhet jashtë këtij intervali ai në lagun 12, pra themi se hipoteza që vlera e autokorrelacionit është zero pranohet për më tepër shohim edhe korrelogramën më poshtë
+    •	Vihet re se me rritjen e lagut autokorrelacionet bëhen zero, pra seria është stacionare
+
      ```R
      library(FinTS)
      
