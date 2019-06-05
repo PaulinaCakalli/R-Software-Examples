@@ -72,6 +72,6 @@ Graphic results
      Acf(ts_data, lag.max = 20, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
      ```
 
-  
+ ![](acf-correlation.png) 
 
  :octocat: 
