@@ -1,4 +1,4 @@
-## 1) Simulation of a Time Series with Gamma Distribution and Graphical Representation
+### 1) Simulation of a Time Series with Gamma Distribution and Graphical Representation
 
 1) In the time series, 500 values were simulated using Gamma Distribution.
 2) As can be seen from the graphical representation the series doesn't have a trend and no seasonalities are observed. By smoothing the time series with method "loess" shows that there is no trend in this case.
@@ -30,7 +30,7 @@ Graphic results
 ![](gamma-series-graphic.png)
 
 
-## Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>   
+### Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>   
 1)	Scatter plots help us to understand better the nature of time series. The following function draws a straight line for every lag.       Correlation coefficient are shown bottomright on the graph.
 2)  As can be seen from the graphical representation almost all the points are near zero and the correlation coefficient is also near zero.
 
@@ -61,17 +61,17 @@ Graphic results
 
 ![](scatter-plot-gamma.png)
 
-3)	Autocorrelation coefficient and correlogram graph
+### Autocorrelation coefficient and correlogram graph
 
-    Autocorrelation coefficients for lag=1:12         
+Autocorrelation coefficients for lag=1:12         
     *r<sub>1</sub>=-0.047;* *r<sub>2</sub>=0.099;* *r<sub>3</sub>=0.002;* *r<sub>4</sub>=0.01;* *r<sub>5</sub>=0.004;*         *r<sub>6</sub>=0.005;* *r<sub>7</sub>=0.025;* *r<sub>8</sub>=0.002;* *r<sub>9</sub>=-0.03;* *r<sub>10</sub>=-0.014;*     *r<sub>11</sub>=-0.008;* *r<sub>12</sub>=0.038.*
      
-    Confidence interval is _]-0.08765386;0.08765386[_
+Confidence interval is _]-0.08765386;0.08765386[_
     
-    •	Vihet re se pjesa më e madhe e autokorrelacioneve është brenda intervalit të besimit dhe vetëm një autokorrelacion ndodhet jashtë këtij intervali ai në lagun 12, pra themi se hipoteza që vlera e autokorrelacionit është zero pranohet për më tepër shohim edhe korrelogramën më poshtë
-    •	Vihet re se me rritjen e lagut autokorrelacionet bëhen zero, pra seria është stacionare
+ •	Vihet re se pjesa më e madhe e autokorrelacioneve është brenda intervalit të besimit dhe vetëm një autokorrelacion ndodhet jashtë këtij intervali ai në lagun 12, pra themi se hipoteza që vlera e autokorrelacionit është zero pranohet për më tepër shohim edhe korrelogramën më poshtë
+•	Vihet re se me rritjen e lagut autokorrelacionet bëhen zero, pra seria është stacionare
 
-     ```R  
+```R  
      ggAcf(ts_data, lag.max = 12, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
      ggAcf(ts_data, lag.max = length(ts_data), type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
      
@@ -80,11 +80,15 @@ Graphic results
      [1] 0.08765386
      (-1)*1.96/sqrt(L) 
      [1] -0.08765386
-     ```
- Graphical results for 12 lag's 
+```
+
+Graphical results for 12 lag's 
+ 
  ![](acf-correlation-12lags.png) 
- Graphical results for all the data
- ![](acf-correlation-alldata.png)  
+
+Graphical results for all the data
+
+![](acf-correlation-alldata.png)  
  
  
  
