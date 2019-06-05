@@ -1,4 +1,4 @@
-## Simulation of a Time Series with Gamma Distribution and Graphical Representation
+## 1) Simulation of a Time Series with Gamma Distribution and Graphical Representation
 
 1) In the time series, 500 values were simulated using Gamma Distribution.
 2) As can be seen from the graphical representation the series doesn't have a trend and no seasonalities are observed. By smoothing the time series with method "loess" shows that there is no trend in this case.
@@ -50,7 +50,7 @@ for (i in 1:12)
   cex.main = 1,   font.main= 3, col.main= "blue",
   cex.sub = 0.55, font.sub = 2, col.sub = "blue")
   
-  legc <- (as.expression(substitute(atop(r == cor), list(cor=round(r[i],3)))))
+  leg <- (as.expression(substitute(atop(r == cor), list(cor=round(r[i],3)))))
   leg1 <- sapply(leg, as.expression)
   legend("bottomright", legend=leg1, text.col ="blue", bg="white", x.intersp=0)
   abline(a=0, b=1, col="orange",lwd=2)    
