@@ -81,9 +81,9 @@ Graphic results
      (-1)*1.96/sqrt(L) 
      [1] -0.08765386
      ```
-
+ Graphical results for 12 lag's 
  ![](acf-correlation-12lags.png) 
- 
+ Graphical results for all the data
  ![](acf-correlation-alldata.png)  
  
  
