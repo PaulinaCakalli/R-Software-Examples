@@ -63,13 +63,12 @@ Graphic results
 
 3)	Autocorrelation coefficient and correlogram graph
 
-   	
     Autocorrelation coefficients for lag=1:12         
-    *r*<sub>1</sub> *r*<sub>2</sub> *r*<sub>3</sub> *r*<sub>4</sub> *r*<sub>5</sub> *r*<sub>6</sub> *r*<sub>7</sub> *r*<sub>8       </sub> *r*<sub>9</sub> *r*<sub>10</sub> *r*<sub>11</sub> *r*<sub>12</sub>
-    
+    *r<sub>1</sub>=-0.047;* *r<sub>2</sub>=0.099;* *r<sub>3</sub>=0.002;* *r<sub>4</sub>=0.01;* *r<sub>5</sub>=0.004;*         *r<sub>6</sub>=0.005;* *r<sub>7</sub>=0.025;* *r<sub>8</sub>=0.002;* *r<sub>9</sub>=-0.03;* *r<sub>10</sub>-0.014;*     *r<sub>11</sub>=-0.008;* *r<sub>12</sub>=0.038.*
      
      ```R
      library(FinTS)
+     
      Acf(ts_data, lag.max = 20, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
      ```
 
