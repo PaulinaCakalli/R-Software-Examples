@@ -30,10 +30,9 @@ Graphic results
 ![](gamma-series-graphic.png)
 
 
-## Retë për N[1], N[2], N[3], ..., N[12] për serinë e parë 
-1)	Për të kuptuar më mirë retë e pikave ndërtoj një funksion, i cili do të vizatoj për lage të ndryshme edhe një drejtëz lineare. Paraqes edhe koeficientin e autokorrelacionit poshtë boshteve të x-it
-2)  Reja e pikave është e rrumbullakosur afër zeros dhe koeficientët e autokorrelacionit janë më afër zeros sesa 1
-3)	Duke qenë se seria është stacionare vihet re që nuk kemi trend stokatik
+## Scatter plots for N[1], N[2], N[3], ..., N[12]  
+1)	Scatter plots help us to understand better the nature of time seires. There is build a function wich draw for every lag a straight       line. Correlation coefficient are shown bottomright on the graph.
+2)  As can be seen from the graphical representation almost all the points are near of zero and the correlation coefficient also near of zero.
 
 ```R
 l <- length(ts_data)
