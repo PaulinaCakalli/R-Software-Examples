@@ -86,7 +86,8 @@ Graphic results
 
  ![](acf-correlation-12lags.png) 
  
- ![](acf-correlation-alldata.png) 
+ ![](acf-correlation-alldata.png)  
+ 
  
  
  
