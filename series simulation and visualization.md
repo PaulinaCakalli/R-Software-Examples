@@ -45,7 +45,7 @@ for (i in 1:12)
   r[i] <- round(cor(lagged, laggedToo),3)
   
   plot(lagged, laggedToo,col="black", xlab ="", ylab=paste("Daily Time Series Lag",i))
-  title(main = paste("Lag ",i), sub = paste("", r[i]),
+  title(main = paste("Lag ",i), sub = paste(""),
   cex.main = 1,   font.main= 3, col.main= "blue",
   cex.sub = 0.55, font.sub = 2, col.sub = "blue")
   
@@ -128,4 +128,27 @@ Graphical results
 
 ![](LR-ND-Series.png)
 
+```R
+l <- length(ts_data1)
+r <-c()
+par(mfrow=c(4,3))
+for (i in 1:12)
+{
+  lagged<- ts_data1[(1+i): l]
+  laggedToo = ts_data1[1:(l-i)]
+  r[i] <- round(cor(lagged, laggedToo),3)
+  
+  plot(lagged, laggedToo,col="black", xlab ="", ylab=paste("Daily Time Series Lag",i))
+  title(main = paste("Lag ",i), sub = paste(""),
+  cex.main = 1,   font.main= 3, col.main= "red",
+  cex.sub = 0.55, font.sub = 2, col.sub = "red")
+  
+  leg <- (as.expression(substitute(atop(r == cor), list(cor=round(r[i],3)))))
+  leg1 <- sapply(leg, as.expression)
+  legend("bottomright", legend=leg1, text.col ="red", bg="white", x.intersp=0)
+  abline(a=0, b=1, col="green",lwd=1)    
+}
+```
+Graphical results
+![](LR-ND-Scatterplots.png)
  :octocat: 
