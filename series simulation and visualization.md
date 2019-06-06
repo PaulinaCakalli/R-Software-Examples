@@ -91,7 +91,15 @@ Graphical results for all the data
 
 ![](acf-correlation-alldata.png)  
  
- 
+PACF Autocorrelation 
+
+```R
+ggPacf(ts_data,lag.max = 12, plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
+ggPacf(ts_data,lag.max = length(ts_data), plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
+```
+Graphical results
+ ![](Gamma-pacf-12lags.png)
+ ![](Gamma-pacf-alldata.png) 
  
  
  :octocat: 
