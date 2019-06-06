@@ -18,9 +18,9 @@ df=data.frame(Value=as.matrix(ts_data), Year=as.Date(as.yearmon(time(ts_data))))
 head(df)
 
 p=ggplot(data = df, aes(x =Year, y = Value))
-+ geom_line(color = "#00AFBB", size = 1) 
-+ ggtitle("Daily data for Gamma Distribution")
-+ theme(plot.title = element_text(hjust = 0.5, color="red", size=14, face="bold.italic"))
+geom_line(color = "#00AFBB", size = 1) 
+ggtitle("Daily data by Gamma Distribution")
+theme(plot.title = element_text(hjust = 0.5, color="red", size=14, face="bold.italic"))
 
 p + stat_smooth(color = "#FC4E07", fill = "#FC4E07",method = "loess")
 ```
@@ -116,14 +116,13 @@ ts_data1=ts(w,frequency=24,start=1990)
 df=data.frame(Value=as.matrix(ts_data), Year=as.Date(as.yearmon(time(ts_data))))
 head(df)
 
-p=ggplot(data = df, aes(x =Year, y = Value),size=1)+
-geom_line(color = "#FC4E07", size = 0)+
-geom_point(size=1, colour="#CC0000")+
-ggtitle("Daily data by combining Linear Regression with Normal Distribution")+
+p=ggplot(data = df, aes(x =Year, y = Value),size=1)
+geom_line(color = "#FC4E07", size = 0)
+geom_point(size=1, colour="#CC0000")
+ggtitle("Daily data by combining Linear Regression with Normal Distribution")
 theme(plot.title = element_text(hjust = 0.5, color="#000099", size=10, face="bold.italic"))
-p + stat_smooth(
-color = "#000099", fill = "#000099",
-method = "loess")
+
+p + stat_smooth(color = "#000099", fill = "#000099",method = "loess")
 ```
 Graphical results
 
