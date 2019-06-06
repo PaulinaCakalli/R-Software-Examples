@@ -27,7 +27,7 @@ p + stat_smooth(color = "#FC4E07", fill = "#FC4E07",method = "loess")
 
 Graphic results
 
-![](gamma-series-graphic.png)
+ ![](gamma-series-graphic.png)
 
 
 ### Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>   
@@ -58,8 +58,7 @@ for (i in 1:12)
 
 Graphic results
 
-
-![](scatter-plot-gamma.png)
+ ![](scatter-plot-gamma.png)
 
 ### Autocorrelation coefficient and correlogram graph
 
@@ -85,11 +84,11 @@ Confidence interval is <b>]-0.08765386;0.08765386[</b>
 
 Graphical results for 12 lag's 
 
- ![](acf-correlation-12lags.png) 
+  ![](acf-correlation-12lags.png) 
 
 Graphical results for all the data
 
-![](acf-correlation-alldata.png)  
+  ![](acf-correlation-alldata.png)  
  
 PACF Autocorrelation 
 
@@ -98,8 +97,9 @@ ggPacf(ts_data,lag.max = 12, plot = TRUE, na.action =na.contiguous, demean = TRU
 ggPacf(ts_data,lag.max = length(ts_data), plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
 ```
 Graphical results
- ![](Gamma-pacf-12lags.png)
- ![](Gamma-pacf-alldata.png) 
+
+  ![](Gamma-pacf-12.png)
+  ![](Gamma-pacf-alldata.png) 
  
  
  :octocat: 
