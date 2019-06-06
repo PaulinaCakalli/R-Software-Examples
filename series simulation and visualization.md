@@ -182,11 +182,11 @@ Autocorrelation coefficients for lag=1:12
 
 Graphical results for 12 lag's 
 
-  ![](LR-ND-acf-correlation-12lags.png) 
+  ![](LR-ND-Acf-correlation-12lags.png) 
 
 Graphical results for all the data
 
-  ![](LR-ND-acf-correlation-alldata.png)  
+  ![](LR-ND-Acf-correlation-alldata.png)  
  
 PACF Autocorrelation 
 
