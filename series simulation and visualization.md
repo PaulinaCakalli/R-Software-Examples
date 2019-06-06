@@ -150,5 +150,8 @@ for (i in 1:12)
 }
 ```
 Graphical results
+
 ![](LR-ND-Scatterplots.png)
+
+
  :octocat: 
