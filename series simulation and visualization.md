@@ -113,6 +113,7 @@ z=rnorm(500,20,10)
 w=z+y  
 
 ts_data1=ts(w,frequency=24,start=1990)
+
 df=data.frame(Value=as.matrix(ts_data), Year=as.Date(as.yearmon(time(ts_data))))
 head(df)
 
