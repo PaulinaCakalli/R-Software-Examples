@@ -128,6 +128,10 @@ Graphical results
 
 ![](LR-ND-Series.png)
 
+### Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>   
+•	Për të kuptuar më mirë retë e pikave ndërtoj një funksion, i cili do të vizatoj për lage të ndryshme edhe një drejtëz lineare. Paraqes edhe koeficientin e autokorrelacionit poshtë boshteve të x-it
+•	Reja e pikave është e zgjatur gjatë kësaj drejtëze dhe koeficientët e autokorrelacionit janë më afër 1 sesa zeros
+
 ```R
 l <- length(ts_data1)
 r <-c()
@@ -154,4 +158,46 @@ Graphical results
 ![](LR-ND-Scatterplots.png)
 
 
+### Autocorrelation coefficient and correlogram graph
+
+Autocorrelation coefficients for lag=1:12         
+    *r<sub>1</sub>=0.9;* *r<sub>2</sub>=0.899;* *r<sub>3</sub>=0.893;* *r<sub>4</sub>=0.886;* *r<sub>5</sub>=0.894;*         *r<sub>6</sub>=0.893;* *r<sub>7</sub>=0.893;* *r<sub>8</sub>=0.899;* *r<sub>9</sub>=0.899;* *r<sub>10</sub>=0.898;*     *r<sub>11</sub>=0.893;* *r<sub>12</sub>=0.891.*
+     
+95% confidence interval is <b>]-0.08765386;0.08765386[</b>
+
+•	Duke qenë se seria ka trend të dukshëm vihet re që autokorrelacionet shkojnë më ngadalë drejt zeros se në serinë e parë
+•	Në korrelogramën e Funksionit të Autokorrelacionit(ACF-së) është marrë lagu=200 për të parë se si autokorrelacionet shkojnë drejt zeros
+•	Në korrelogramën e Funksionit të Autokorrelacionit të pjesshëm(PACF-së) është marrë lagu=50
+
+```R  
+     ggAcf(ts_data1, lag.max = 12, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
+     ggAcf(ts_data1, lag.max = length(ts_data), type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
+     
+     L=length(ts_data1)
+     1.96/sqrt(L) 
+     [1] 0.08765386
+     (-1)*1.96/sqrt(L) 
+     [1] -0.08765386
+```
+
+Graphical results for 12 lag's 
+
+  ![](LR-ND-acf-correlation-12lags.png) 
+
+Graphical results for all the data
+
+  ![](LR-ND-acf-correlation-alldata.png)  
+ 
+PACF Autocorrelation 
+
+```R
+ggPacf(ts_data1,lag.max = 12, plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
+ggPacf(ts_data1,lag.max = length(ts_data), plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
+```
+Graphical results
+
+  ![](LR-ND-Pacf-12.png)
+  ![](LR-ND-Pacf-alldata.png) 
+  
+  
  :octocat: 
