@@ -125,4 +125,8 @@ p + stat_smooth(
 color = "#000099", fill = "#000099",
 method = "loess")
 ```
+Graphical results
+
+![](LR-ND-Series.png)
+
  :octocat: 
