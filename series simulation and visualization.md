@@ -65,7 +65,7 @@ Graphic results
 Autocorrelation coefficients for lag=1:12         
     *r<sub>1</sub>=-0.047;* *r<sub>2</sub>=0.099;* *r<sub>3</sub>=0.002;* *r<sub>4</sub>=0.01;* *r<sub>5</sub>=0.004;*         *r<sub>6</sub>=0.005;* *r<sub>7</sub>=0.025;* *r<sub>8</sub>=0.002;* *r<sub>9</sub>=-0.03;* *r<sub>10</sub>=-0.014;*     *r<sub>11</sub>=-0.008;* *r<sub>12</sub>=0.038.*
      
-Confidence interval is <b>]-0.08765386;0.08765386[</b>
+95% confidence interval is <b>]-0.08765386;0.08765386[</b>
     
  Based on the correlogram for 12 lag's, only one of the autocorrelations is outside dhe cofidence interval which approves the 
  hypothesis that autocorrelation values are near zero. 
