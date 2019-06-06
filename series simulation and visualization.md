@@ -101,5 +101,28 @@ Graphical results
   ![](Gamma-pacf-12.png)
   ![](Gamma-pacf-alldata.png) 
  
+ ### 2) Simulation of a Time Series by Combining Linear Regression with Normal Distribution
  
+ •	Në serinë e dytë është bërë kombinimi i dy simulimeve, pra janë simuluar 500 të dhëna nga një varg regresi lineare dhe 500 të dhëna nga shpërndarja normale me pritje matematike 20 dhe dispersion 10
+•	Nga paraqitja grafike shohim se seria ka trend të dukshëm dhe vihet re prania e zhurmës si rezultat i simulimit të shpërndarjes normale
+
+```R
+x=seq(1,100,length.out=500)    
+y=1*x+1/2     
+z=rnorm(500,20,10)    
+w=z+y  
+
+ts_data1=ts(w,frequency=24,start=1990)
+df=data.frame(Value=as.matrix(ts_data), Year=as.Date(as.yearmon(time(ts_data))))
+head(df)
+
+p=ggplot(data = df, aes(x =Year, y = Value),size=1)+
+geom_line(color = "#FC4E07", size = 0)+
+geom_point(size=1, colour="#CC0000")+
+ggtitle("Daily data by combining Linear Regression with Normal Distribution")+
+theme(plot.title = element_text(hjust = 0.5, color="#000099", size=10, face="bold.italic"))
+p + stat_smooth(
+color = "#000099", fill = "#000099",
+method = "loess")
+```
  :octocat: 
