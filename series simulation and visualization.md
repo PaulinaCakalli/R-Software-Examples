@@ -68,8 +68,9 @@ Autocorrelation coefficients for lag=1:12
      
 Confidence interval is _]-0.08765386;0.08765386[_
     
- •	Vihet re se pjesa më e madhe e autokorrelacioneve është brenda intervalit të besimit dhe vetëm një autokorrelacion ndodhet jashtë këtij intervali ai në lagun 12, pra themi se hipoteza që vlera e autokorrelacionit është zero pranohet për më tepër shohim edhe korrelogramën më poshtë
-•	Vihet re se me rritjen e lagut autokorrelacionet bëhen zero, pra seria është stacionare
+ Based on the correlogram for 12 lag's, only one of the autocorrelations is outside dhe cofidence interval which approves the 
+ hypothesis that autocorrelation values are near zero. 
+ 
 
 ```R  
      ggAcf(ts_data, lag.max = 12, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
