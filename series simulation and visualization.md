@@ -196,8 +196,8 @@ ggPacf(ts_data1,lag.max = length(ts_data), plot = TRUE, na.action =na.contiguous
 ```
 Graphical results
 
-  ![](LR-ND-Pacf-12.png)
-  ![](LR-ND-Pacf-alldata.png) 
+  ![](LR-ND-Pacf-correlation-12lags.png)
+  ![](LR-ND-Pacf-correlation-alldata.png) 
   
   
  :octocat: 
