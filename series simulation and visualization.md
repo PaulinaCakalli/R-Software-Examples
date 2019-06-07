@@ -1,7 +1,7 @@
 ### 1) Simulation of a Time Series with Gamma Distribution and Graphical Representation
 
-1) In the time series, 500 values were simulated using Gamma Distribution.
-2) As can be seen from the graphical representation the series doesn't have a trend and no seasonalities are observed. By smoothing the time series with method "loess" shows that there is no trend in this case.
+1) In the time series, 500 values were simulated by Gamma Distribution.
+2) As can be seen from the graphical representation the series doesn't have a trend and no seasonalities are observed. By smoothing the    time series with method "loess" shows that there is no trend in this case.
 3) White Noises are identifiable.
 4) The time series is stationary.
 
@@ -30,9 +30,10 @@ Graphic results
  ![](gamma-series-graphic.png)
 
 
-### Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>   
-1)	Scatter plots help us to understand better the nature of time series. The following function draws a straight line for every lag.       Autocorrelation coefficient are shown bottomright on the graph.
-2) As can be seen from the graphical representation almost all the points are near zero and the autocorrelation coefficient is also near zero.
+### Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>
+
+1)	Scatter plots help us to understand better the nature of time series. The following function draws a straight line for each lag.        Autocorrelation coefficient is shown bottomright on the graph.
+2) As can be seen from the graphical representation almost all the points are near zero and the autocorrelation coefficient is also near    zero.
 
 ```R
 l <- length(ts_data)
@@ -62,13 +63,10 @@ Graphic results
 
 ### Autocorrelation coefficient and correlogram graph
 
-Autocorrelation coefficients for lag=1:12         
-    *r<sub>1</sub>=-0.047;* *r<sub>2</sub>=0.099;* *r<sub>3</sub>=0.002;* *r<sub>4</sub>=0.01;* *r<sub>5</sub>=0.004;*         *r<sub>6</sub>=0.005;* *r<sub>7</sub>=0.025;* *r<sub>8</sub>=0.002;* *r<sub>9</sub>=-0.03;* *r<sub>10</sub>=-0.014;*     *r<sub>11</sub>=-0.008;* *r<sub>12</sub>=0.038.*
-     
-95% confidence interval is <b>]-0.08765386;0.08765386[</b>
-    
-Based on the correlogram for 12 lag's, only one of the autocorrelations is outside dhe cofidence interval which approves the hypothesis that autocorrelation values are near zero. 
- 
+1) Autocorrelation coefficients for lag=1:12         
+ *r<sub>1</sub>=-0.047;* *r<sub>2</sub>=0.099;* *r<sub>3</sub>=0.002;* *r<sub>4</sub>=0.01;* *r<sub>5</sub>=0.004;*              *r<sub>6</sub>=0.005;* *r<sub>7</sub>=0.025;* *r<sub>8</sub>=0.002;* *r<sub>9</sub>=-0.03;* *r<sub>10</sub>=-0.014;*        *r<sub>11</sub>=-0.008;* *r<sub>12</sub>=0.038.*
+2) 95% confidence interval is <b>]-0.08765386;0.08765386[</b>
+3) Based on the correlogram for 12 lag's, only one of the autocorrelations is outside the cofidence interval which approves the            hypothesis that autocorrelation values are near zero.  
 
 ```R  
      ggAcf(ts_data, lag.max = 12, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
@@ -89,7 +87,7 @@ Graphical results for all the data
 
   ![](acf-correlation-alldata.png)  
  
-PACF Autocorrelation 
+PACF Autocorrelation Function
 
 ```R
 ggPacf(ts_data,lag.max = 12, plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
@@ -100,10 +98,11 @@ Graphical results
   ![](Gamma-pacf-12.png)
   ![](Gamma-pacf-alldata.png) 
  
-### 2) Simulation of a Time Series by Combining Linear Regression with Normal Distribution
  
-In this time series are combinated two different simulation, there are simulated 500 values by the linear regression and 500 values by normal distribution with µ=20 and σ^2=10.
-As can be seen from the graphical representation the time series presents an increasing trend and the presence of noises is identifiable as a result of normal distribution simulation. 
+### 2) Simulation of a Time Series by combining Linear Regression with Normal Distribution
+ 
+1) In this time series are combinated two different simulation, there are simulated 500 values by the linear regression and 500 values      by Normal Distribution with µ=20 and σ^2=10.
+2) As can be seen from the graphical representation the time series presents an increasing trend and the presence of noises is              identifiable as a result of normal distribution simulation. 
 
 ```R
 x=seq(1,100,length.out=500)    
@@ -128,8 +127,11 @@ Graphical results
 
 ![](LR-ND-Series.png)
 
-### Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>   
-The following function gives scatter plots for 12 lag's and draws a straight line for each one. Autocorrelation coefficient is shown bottomright on the graph. The points are extended during the straight line and the coefficients of autocorrelation are closer to 1 than zero which is related to the nature of the series.
+
+### Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>
+
+1) The following function gives scatter plots for 12 lag's and draws a straight line for each one. Autocorrelation coefficient is shown    bottomright on the graph. 
+2) The points are extended during the straight line and the coefficients of autocorrelation are closer to 1 than zero which is              related to the nature of the series.
 
 ```R
 l <- length(ts_data1)
@@ -159,14 +161,14 @@ Graphical results
 
 ### Autocorrelation coefficient and correlogram graph
 
-Autocorrelation coefficients for lag=1:12         
-*r<sub>1</sub>=0.9;* *r<sub>2</sub>=0.899;* *r<sub>3</sub>=0.893;* *r<sub>4</sub>=0.886;* *r<sub>5</sub>=0.894;*         *r<sub>6</sub>=0.893;* *r<sub>7</sub>=0.893;* *r<sub>8</sub>=0.899;* *r<sub>9</sub>=0.899;* *r<sub>10</sub>=0.898;*     *r<sub>11</sub>=0.893;* *r<sub>12</sub>=0.891.*
+1) Autocorrelation coefficients for lag=1:12         
+ *r<sub>1</sub>=0.9;* *r<sub>2</sub>=0.899;* *r<sub>3</sub>=0.893;* *r<sub>4</sub>=0.886;* *r<sub>5</sub>=0.894;*            *r<sub>6</sub>=0.893;* *r<sub>7</sub>=0.893;* *r<sub>8</sub>=0.899;* *r<sub>9</sub>=0.899;* *r<sub>10</sub>=0.898;*      *r<sub>11</sub>=0.893;* *r<sub>12</sub>=0.891.*
      
-95% confidence interval is <b>]-0.08765386;0.08765386[</b>
+2) 95% confidence interval is <b>]-0.08765386;0.08765386[</b>
 
-As the series has an increasing trend it is noticed that autocorrelations go slower toward zero than in the first series simulated by Gamma Distribution.
-In the following correlogram graph are taken 12 first lag's to see how autocorrelations go straight to zero and in the second correlogram graph is taken all the data length.
-Partial Autocorrelation function is also given.
+3) As the series has an increasing trend it is noticed that autocorrelations go slower toward zero than in the first time series            simulated by Gamma Distribution.
+4) In the following correlogram graph are taken 12 first lag's to see how autocorrelations go straight to zero and in the second            correlogram graph is taken all the data length.
+5) Partial Autocorrelation function is also given.
 
 ```R  
      ggAcf(ts_data1, lag.max = 12, type = "correlation", plot = TRUE, na.action = na.contiguous, demean = TRUE,main="")
@@ -187,7 +189,7 @@ Graphical results for all the data
 
   ![](LR-ND-Acf-correlation-alldata.png)  
  
-PACF Autocorrelation 
+PACF Autocorrelation Function
 
 ```R
 ggPacf(ts_data1,lag.max = 12, plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
