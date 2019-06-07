@@ -32,7 +32,7 @@ Graphic results
 
 ### Scatter plots for *N*<sub>1</sub> , *N*<sub>2</sub> , *N*<sub>3</sub> , ..., *N*<sub>12</sub>   
 1)	Scatter plots help us to understand better the nature of time series. The following function draws a straight line for every lag.       Correlation coefficient are shown bottomright on the graph.
-2)  As can be seen from the graphical representation almost all the points are near zero and the correlation coefficient is also near zero.
+2) As can be seen from the graphical representation almost all the points are near zero and the correlation coefficient is also near zero.
 
 ```R
 l <- length(ts_data)
@@ -103,8 +103,8 @@ Graphical results
  
  ### 2) Simulation of a Time Series by Combining Linear Regression with Normal Distribution
  
- •	Në serinë e dytë është bërë kombinimi i dy simulimeve, pra janë simuluar 500 të dhëna nga një varg regresi lineare dhe 500 të dhëna nga shpërndarja normale me pritje matematike 20 dhe dispersion 10
-•	Nga paraqitja grafike shohim se seria ka trend të dukshëm dhe vihet re prania e zhurmës si rezultat i simulimit të shpërndarjes normale
+In this time series are combinated two different simulation, there are simulated 500 values by the linear regression and 500 values by normal distribution with µ=20 and σ^2=10.
+As can be seen from the graphical representation the time series present a increasing trend and the presence of noises are identifiable as a result of normal distribution simulation. 
 
 ```R
 x=seq(1,100,length.out=500)    
