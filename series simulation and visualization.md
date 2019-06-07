@@ -79,11 +79,11 @@ Graphic results
      [1] -0.08765386
 ```
 
-Graphical results for 12 lag's 
+Graphic results for 12 lag's 
 
   ![](acf-correlation-12lags.png) 
 
-Graphical results for all the data
+Graphic results for all the data
 
   ![](acf-correlation-alldata.png)  
  
@@ -93,7 +93,7 @@ PACF Autocorrelation Function
 ggPacf(ts_data,lag.max = 12, plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
 ggPacf(ts_data,lag.max = length(ts_data), plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
 ```
-Graphical results
+Graphic results
 
   ![](Gamma-pacf-12.png)
   ![](Gamma-pacf-alldata.png) 
@@ -123,7 +123,7 @@ theme(plot.title = element_text(hjust = 0.5, color="#000099", size=10, face="bol
 
 p + stat_smooth(color = "#000099", fill = "#000099",method = "loess")
 ```
-Graphical results
+Graphic results
 
 ![](LR-ND-Series.png)
 
@@ -154,7 +154,7 @@ for (i in 1:12)
   abline(a=0, b=1, col="green",lwd=1)    
 }
 ```
-Graphical results
+Graphic results
 
 ![](LR-ND-Scatterplots.png)
 
@@ -181,11 +181,11 @@ Graphical results
      [1] -0.08765386
 ```
 
-Graphical results for 12 lag's 
+Graphic results for 12 lag's 
 
   ![](LR-ND-Acf-correlation-12lags.png) 
 
-Graphical results for all the data
+Graphic results for all the data
 
   ![](LR-ND-Acf-correlation-alldata.png)  
  
@@ -195,7 +195,7 @@ PACF Autocorrelation Function
 ggPacf(ts_data1,lag.max = 12, plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
 ggPacf(ts_data1,lag.max = length(ts_data), plot = TRUE, na.action =na.contiguous, demean = TRUE, main="")  
 ```
-Graphical results
+Graphic results
 
   ![](LR-ND-Pacf-correlation-12lags.png)
   ![](LR-ND-Pacf-correlation-alldata.png) 
