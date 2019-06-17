@@ -1,4 +1,4 @@
-### 1) Simulation of a Time Series with Trend and Seasonality
+### 1) Simulation of Time Series with Trend and Seasonality, *T*<sub>n</sub>=an+bcos(πn/3)+ccos(πn/6), n=1, ..., 100
 
 ```R
 
