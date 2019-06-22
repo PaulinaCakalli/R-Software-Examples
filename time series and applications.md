@@ -1,6 +1,6 @@
 ### 1) Simulation of Time Series with Trend and Seasonality, *T*<sub>n</sub>=an+bcos(πn/3)+ccos(πn/6), n=1, ..., 100
 
-As it can be seen from the graphical results the time series is a superposition of a growing trend and two seasonality (periods 6 and 12). 
+As it can be seen from the graphical results the time series is a superposition of a growing trend and two seasonalities (periods 6 and 12). 
 
 ```R
 
@@ -147,7 +147,7 @@ Graphic results
  
  ### 6)  Deseasonalized Series *Z*<sub>n</sub>=*y*<sub>n</sub>-*y*<sub>n-12</sub> 
  
-After the second differentation for Lags=1:12, we can see that the time series becomes even more stationary. There is no trend and seasonalitys in the obtained series. 
+After the second differentation for Lags=1:12, we can see that the time series becomes even more stationary. There is no trend and seasonalities in the obtained series. 
  
 ```R
 zn=diff(yn,lag=12)
