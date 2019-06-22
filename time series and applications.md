@@ -4,7 +4,7 @@ As it can be seen from the graphical results the time series is a superposition 
 
 ```R
 
-library (ggplot2)
+library(ggplot2)
 library(ggpmisc)
 
 n=seq(1,100)
@@ -84,8 +84,8 @@ r
 
 ci2 = qnorm((1 + .95)/2)/sqrt(length(rnorm(100)))
 ggAcf(ts_data, lag.max = length(ts_data), main="") +
-    geom_segment(lineend = "butt", color = "#F4A950") +
-    geom_hline(yintercept = c(ci2, -ci2), color = "#161B21", linetype = "dashed")
+geom_segment(lineend = "butt", color = "#F4A950") +
+geom_hline(yintercept = c(ci2, -ci2), color = "#161B21", linetype = "dashed")
     
 ```
 
@@ -119,12 +119,13 @@ We see that for the Lag=1, *r*<sub>1</sub> is closer to zero because the differe
 ```R
 
 l = length(yn)
- r = c()
- for (i in 1:98){
+r = c()
+for (i in 1:98)
+{
      lagged = yn[(1+i): l]
      laggedToo = yn[1:(l-i)]
      r[i] = round(cor(lagged, laggedToo),3)
- }
+}
  
  r
 [1]  0.541 -0.157 -0.606 -0.457  0.030  0.292  0.008 -0.468 -0.599 -0.142  0.596  0.915  0.579 -0.173 -0.627 -0.458
@@ -139,6 +140,7 @@ ci2 = qnorm((1 + .95)/2)/sqrt(length(rnorm(100)))
 ggAcf(yn, lag.max = length(yn), main="") +
 geom_segment(lineend = "butt", color = "#F4A950") +
 geom_hline(yintercept = c(ci2, -ci2), color = "#161B21", linetype = "dashed")
+
 ```
 
 Graphic results
@@ -150,6 +152,7 @@ Graphic results
 After the second differentation for Lags=1:12, we can see that the time series becomes even more stationary. There is no trend and seasonalities in the obtained series. 
  
 ```R
+
 zn=diff(yn,lag=12)
 tm=cbind(yn,zn)
 head(tm)
@@ -158,6 +161,7 @@ tm2=ts(tm)
 autoplot(tm2,ylab="",facets = TRUE,main="Z(n) = y(n)-y(n-12)",colour = TRUE,size=1)
 
 ```
+
 Graphic results
 
  ![](Deseasonalized.png)
@@ -168,16 +172,17 @@ We argue that ACF represents a strong stationarity of the obtained series, in th
  
  ```R
  
- l = length(zn)
- r = c()
- for (i in 1:80){
+l = length(zn)
+r = c()
+for (i in 1:80)
+{
      lagged = zn[(1+i): l]
      laggedToo = zn[1:(l-i)]
      r[i] = round(cor(lagged, laggedToo),3)
- }
+}
  
- r
- [1] -0.519 -0.014  0.036  0.035 -0.042  0.096 -0.142  0.020  0.070 -0.028  0.199 -0.438  0.326 -0.051 -0.134  0.061
+r
+[1] -0.519 -0.014  0.036  0.035 -0.042  0.096 -0.142  0.020  0.070 -0.028  0.199 -0.438  0.326 -0.051 -0.134  0.061
 [17]  0.089 -0.077  0.019  0.018 -0.103  0.145 -0.046 -0.068  0.051 -0.092  0.288 -0.272  0.021  0.024  0.099 -0.073
 [33]  0.085 -0.220  0.231  0.006 -0.206  0.202 -0.202  0.116  0.050 -0.077 -0.034  0.023  0.051 -0.049 -0.087  0.014
 [49]  0.237 -0.364  0.222  0.165 -0.335  0.133  0.053  0.009 -0.204  0.380 -0.325  0.175 -0.223  0.463 -0.496  0.120
@@ -189,6 +194,7 @@ geom_segment(lineend = "butt", color = "#F4A950") +
 geom_hline(yintercept = c(ci2, -ci2), color = "#161B21", linetype = "dashed")
  
 ```
+
 Graphic results
 
  ![](ACF_Deseasonalized.png)
