@@ -1,5 +1,7 @@
 ### 1) Simulation of Time Series with Trend and Seasonality, *T*<sub>n</sub>=an+bcos(πn/3)+ccos(πn/6), n=1, ..., 100
 
+As it can be seen from the graphical results the time series is a superposition of a growing trend and two seasonality (periods 6 and 12). 
+
 ```R
 
 library (ggplot2)
@@ -30,6 +32,8 @@ Graphic results
  
 ### 2) Simulation of noises in time series *x*<sub>n</sub>=*t*<sub>n</sub>+*e*<sub>n</sub>, where *e*<sub>n</sub> are independent case variables N (0,1)
 
+After the simulation of noises the time series appears differently. The growth trend is still observed, but seasonalities become less visible.
+
 ```R
 
 en=rnorm(100)
@@ -54,6 +58,7 @@ Graphic results
  
 ### 3) Auto-Correlations function for *X*<sub>n</sub>=*t*<sub>n</sub>+*e*<sub>n</sub>
 
+The autocorrelation function shows that *r*<sub>1</sub> is closer to 1 than zero because the series has a trend.
 
 ```R
 
@@ -90,6 +95,8 @@ Graphic results
  
 ### 4) Differentiated Series *Y*<sub>n</sub>=*x*<sub>n</sub>-*x*<sub>n-1</sub>
 
+In the differentiated series we see that trend is removed and the series becomes stationary.
+
 ```R
 
 yn=diff(xn,lag=1)
@@ -106,6 +113,8 @@ Graphic results
  ![](Rplotdiff.png)
  
 ### 5) Auto-Correlation function for Differentiated Series
+
+We see that for the Lag=1, *r*<sub>1</sub> is closer to zero because the differentiated series has no trend and it is noticed that autocorrelation coefficients in this case are more within the confidence interval.
 
 ```R
 
@@ -138,6 +147,8 @@ Graphic results
  
  ### 6)  Deseasonalized Series *Z*<sub>n</sub>=*y*<sub>n</sub>-*y*<sub>n-12</sub> 
  
+After the second differentation for Lags=1:12, we can see that the time series becomes even more stationary. There is no trend and seasonalitys in the obtained series. 
+ 
 ```R
 zn=diff(yn,lag=12)
 tm=cbind(yn,zn)
@@ -152,6 +163,8 @@ Graphic results
  ![](Deseasonalized.png)
  
  ### 7)  Auto-Correlation for Deseasonalized Series
+ 
+We argue that ACF represents a strong stationarity of the obtained series, in this case about 95% of the correlation coefficients are within the confidence interval. It is observed that for lag 1, *r*<sub>1</sub> is close to -1 (negative) and the series has no trend.
  
  ```R
  
